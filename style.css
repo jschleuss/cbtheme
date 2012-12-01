@@ -1,0 +1,168 @@
+/*
+Theme Name: Crystal Bridges Museum Collection 1.2
+Theme URI: http://www.jschleuss.com
+Description: A theme for organizing lots of art!
+Version: 1.2
+Author: Jon Schleuss
+Author URI: http://www.jschleuss.com
+Tags: museum, art, organization, tables
+*/
+
+@import "css/reset.css";
+@import "css/typography.css";
+@import "css/layout.css";
+
+
+/* COLORS
+5a7aab - blue
+*/
+
+html { overflow-y: scroll; }
+
+body { font-family: Helvetica, Arial, sans-serif; background: #cccccc; }
+
+h1 { font-size: 20px; font-weight: normal; line-height: 120%; margin: 0 0 5px; }
+h2, h3 { font-size: 16px; font-weight: bold; }
+
+p, table { font-size: 14px; line-height: 120%; color: #333333; }
+p { margin: 0 0 10px; }
+
+a { color: #5a7aab; text-decoration: none; } 
+
+.clr { display: block; clear: both; }
+
+#page_wrap { margin: 0 auto; }
+
+#main { padding: 10px 5px; background: #ffffff; box-shadow: 0 0 10px #555555; }
+
+#header { background: #555555; padding: 5px; box-shadow: 0 0 10px #555555; }
+#header h1 { margin: 0; font-size: 30px; line-height: 34px; font-weight: normal; }
+#header h1 a { color: #ffffff; }
+#header h1 a:hover { color: #eeeeee; }
+#header p { font-size: 12px; line-height: 18px; color: #ffffff; margin: 0; }
+
+#navigation { padding: 10px 5px 0px; }
+#navigation ul { float: left; margin: 4px 0 0 0; }
+#navigation ul li { float: left; margin: 0 10px 10px 0; font-size: 14px; letter-spacing: 0.5px; }
+#navigation ul li a { text-transform: uppercase; color: #333333; text-shadow: 0 0 5px #aaaaaa; }
+#navigation ul li a:hover { text-decoration: underline; }
+
+#navigation .site_search { float: right; margin: 0 0 10px; }
+#navigation input.search_text { border: 1px solid #999999; height: 14px; padding: 2px; color: #555555; box-shadow: inset 0 0 2px #cccccc; border-radius: 4px; }
+
+/* SITE SEARCH 
+.site_search { margin: 0 auto 5px; height: 25px; width: 310px; clear: left;  }
+.site_search .left_of_search, .site_search form div input.search_text { float: left; -webkit-border-radius: 0; }
+.left_of_search { background: url(images/search_left.png) top left no-repeat; width: 10px; height: 25px; display: block; }
+.site_search form div input.search_text { background: url(images/search_middle.png) top left repeat-x; height: 25px; width: 274px; border: none; color: #cccccc; font-size: 14px; }
+.site_search form div input.search_text:focus { outline: none; }
+.site_search form div input.search_submit { display: block; width: 26px; height: 25px; background: url(images/search_input.png) left top no-repeat; border: none; text-indent: -9999px; cursor: pointer; -webkit-border-radius: 0; }
+.site_search form div input.search_submit:hover { background-position: 0 -25px; }
+*/
+
+#social .share_button { height: 20px; margin: 0 0 5px; }
+#view_buttons { font-size: 14px; line-height: 20px; color: #333333; float: right; margin: 0 0 0 10px; height: 0; overflow: visible; }
+#view_buttons div { float: left; margin: 0 0 10px 0; }
+#view_buttons div#view_text { margin: 0 5px 0 0; }
+#view_buttons a { background: url(images/view_sprite.png) top left no-repeat; text-indent: -9999px; display: block; height: 20px; width: 24px; }
+#view_buttons a { float: left; }
+#view_buttons #text_view a { background-position: 0 0; }
+#view_buttons #text_view a:hover, body.page-template-text-only-php #view_buttons #text_view a { background-position: 0 -20px; }
+#view_buttons #list_view a { background-position: -24px 0; }
+#view_buttons #list_view a:hover, body.home #view_buttons #list_view a { background-position: -24px -20px; }
+#view_buttons #thumb_view a { background-position: -48px 0; }
+#view_buttons #thumb_view a:hover, body.page-template-large-thumbs-php #view_buttons #thumb_view a { background-position: -48px -20px; }
+
+.dataTables_filter { float: left; }
+
+table.sortable { margin: 20px 0; font-size: 12px; table-layout: fixed; width: 400px; border-bottom: 1px solid #cccccc;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+
+ }
+table.sortable thead tr th { font-weight: bold; cursor: pointer; border-bottom: 1px solid #cccccc; }
+table.sortable thead tr th.thumbnail { cursor: default; }
+table.sortable thead tr th a { color: #333333; }
+table.sortable thead tr th span.sort_buttons { display: inline-block; height: 14px; width: 11px; margin: 0 0 0 5px; vertical-align: top; }
+table.sortable thead tr th.sorting span.sort_buttons { background: url(images/sorting_both.png) right top no-repeat; }
+table.sortable thead tr th.sorting_asc span.sort_buttons { background: url(images/sorting_asc.png) right top no-repeat; }
+table.sortable thead tr th.sorting_desc span.sort_buttons { background: url(images/sorting_desc.png) right top no-repeat; }
+table.sortable tbody tr:hover { background: #eeeeee; }
+table.sortable tbody a:hover { text-decoration: underline; }
+table.sortable thead tr th.thumbnail { background: none; }
+table.sortable tbody tr td.thumbnail img { width: 40px; }
+table.sortable thead tr th.thumbnail, table.sortable tbody tr td.thumbnail { width: 40px; padding: 5px 5px 5px 0; }
+table.sortable thead tr th.title, table.sortable tbody tr td.title { width: 35%; padding: 0 10px 5px 0; }
+table.sortable thead tr th.artist, table.sortable tbody tr td.artist { width: 30%; padding: 0 10px 5px 0; }
+table.sortable thead tr th.year, table.sortable tbody tr td.year { width: 20%; padding: 0 0 5px; }
+table.sortable tbody tr td.medium, table.sortable thead tr th.medium { display: none; }
+table.sortable tbody tr td.title { font-style: italic; }
+table.sortable tbody tr td.slug, table.sortable thead tr th.slug { display: none !important; }
+
+
+/* Text Only */
+body.page-template-text-only-php table.sortable tbody td { padding: 5px 0; }
+
+
+/* Pagination */
+#datatable_paginate #datatable_previous, #datatable_paginate #datatable_next { float: left; display: block; cursor: pointer; }
+#datatable_paginate #datatable_previous:hover, #datatable_paginate #datatable_next:hover { text-decoration: underline; }
+#datatable_paginate #datatable_next { margin: 0 0 0 10px; }
+
+#large_thumb_view { margin: 10px 0 0 0; }
+
+
+body.page-template-text-only-php table.sortable tr { vertical-align: top; }
+
+
+#masonry_container { margin: 40px 0; }
+#masonry_container .masonry_item { width: 260px; margin: 0 10px 10px 0; float: left; padding: 5px; box-shadow: 0px 0px 5px #cccccc; }
+#masonry_container .masonry_item:hover { box-shadow: 0px 0px 5px #555555; }
+#masonry_container .masonry_item p { margin: 0; }
+#masonry_container .masonry_item p a:hover { text-decoration: underline; }
+#masonry_container .masonry_item p.comment_count { text-align: right; font-size: 12px; color: #cccccc; }
+#masonry_container .masonry_item p.comment_count a { color: #cccccc; }
+
+body.single #more_by_artist { margin: 10px 0; clear: both; } 
+body.single #more_by_artist h2 { margin: 0 0 5px; }
+body.single .more_thumbnail { float: left; margin: 0 5px 0 0; }
+/* body.single .piece_meta { margin: 0 0 0 10px; clear: left; } */
+
+/* COMMENTS */
+#post_comments { clear: both; }
+#post_comments li.comment { clear: both; }
+#post_comments .comment-author { font-size: 14px; line-height: 120%; }
+#post_comments .comment-author img { float: left; margin: 0 5px 5px 0; }
+#post_comments li.comment .commentmetadata { font-size: 11px; }
+
+#respond { clear: both; }
+#respond form p label { display: block; }
+#respond form p input { width: 70%;max-width: 300px; display: block; border: 1px solid #cccccc; padding: 2px; font-size: 14px; color: #555555; }
+#respond form p .required { display: none; }
+#respond form p textarea { border: 1px solid #cccccc; padding: 2px; font-size: 14px; color: #555555; width: 100%; max-width: 300px; }
+#respond form p.form-allowed-tags { display: none; }
+
+#cntctfrm_contact_form input.text { width: 100%; max-width: 303px; border: 1px solid #cccccc; height: 16px; padding: 2px; margin: 5px 0 !important; }
+#cntctfrm_contact_form textarea#cntctfrm_contact_message { max-width: 303px; border: 1px solid #cccccc; height: 100px; margin: 5px 0 !important; padding: 2px; }
+
+#post_content #social { margin: 0 0 10px; }
+#disqus_thread { clear: both; }
+.dsq-like-activity, #dsq-pagination, #dsq-account-dropdown { font-size: 14px; }
+
+#datatable_wrapper { margin: 0 0 10px; overflow-x: scroll; clear: both; }
+#datatable_length, #datatable_filter { margin: 0 0 10px; }
+#datatable_length label, #datatable_filter label { font-size: 14px; color: #333333; }
+#datatable_filter input { border: 1px solid #cccccc; padding: 2px; font-size: 14px; color: #333333; width: 150px; }
+#datatable_info { font-size: 14px; line-height: 120%; color: #333333; margin: 0 0 10px; }
+#datatable_paginate { font-size: 14px; }
+
+#footer { background: #555555; padding: 5px; margin: 20px 0 0; box-shadow: 0 0 10px #555555; }
+#footer p, #footer p a { color: #ffffff; }
+
+body.single #main h1 span.categories, body.single #main h1 span.categories a { color: #cccccc; }
+/* body.single #main h1 span.art_piece_title { font-style: italic; } */
+/* body.single #main p img { width: 100% !important; height: 100%;} */

@@ -1,0 +1,49 @@
+#page_wrap { margin: 0 20px; }
+
+#main p { max-width: 600px; }
+
+table.sortable { font-size: 14px; width: 100%; }
+
+table.sortable thead tr th.medium, table.sortable tbody tr td.medium { display: table-cell; width: 36%; }
+
+table.sortable thead tr th.thumbnail, table.sortable tbody tr td.thumbnail { width: 55px; }
+
+table.sortable tbody tr td.thumbnail img { width: 50px; }
+
+table.sortable thead tr th.title, table.sortable tbody tr td.title { width: 32%; }
+
+table.sortable thead tr th.artist, table.sortable tbody tr td.artist { width: 22%; }
+
+/* Text Only */
+body.page-template-text-only-php table.sortable thead tr th.title, body.page-template-text-only-php table.sortable tbody tr td.title { width: 35% !important; }
+body.page-template-text-only-php table.sortable thead tr th.artist, body.page-template-text-only-php table.sortable tbody tr td.artist { width: 20% !important; }
+body.page-template-text-only-php table.sortable thead tr th.year, body.page-template-text-only-php table.sortable tbody tr td.year { width: 20% !important; }
+body.page-template-text-only-php table.sortable tbody tr td.medium, body.page-template-text-only-php table.sortable thead tr th.medium { width: 35% !important; }
+body.page-template-text-only-php table.sortable tbody tr td.title { font-style: italic; }
+body.page-template-text-only-php table.sortable tbody tr td.slug, body.page-template-text-only-php table.sortable thead tr th.slug { display: none !important; }
+
+
+#datatable_wrapper {overflow-x: visible; }
+
+#footer .site_search { margin: 0 0 5px; }
+
+#col1 { float: left; margin: 0 5px 0 0; width: 260px; }
+#col2 { float: left; width: 260px; margin: 0 5px 0 0; }
+#col3 { float: left; width: 260px; }
+
+#large_thumb_view .item { margin: 0 0 5px 0; }
+#large_thumb_view .item a:hover { 
+	-webkit-transition: all .2s; 
+	-webkit-box-shadow: 0 0 5px #555555;
+	-moz-transition: all .2s;
+	-moz-box-shadow: 0 0 5px #555555;
+	transition: all .2s;
+	box-shadow: 0 0 5px #555555;
+	
+	 }
+#large_thumb_view .item a .item_title { display: none;  text-align: left; padding: 4px; background: rgba(85, 85, 85, 0.8); float: left; width: 252px; color: #ffffff; font-size: 14px; }
+#large_thumb_view .item a:hover .item_title { display: block; }
+	 
+#view_buttons { display: block; }
+#social { float: left; }
+
